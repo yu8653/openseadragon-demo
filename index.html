@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Large Image Loading</title>
+        <script>
+            console.time()
+
+            function loadend(){
+                console.timeEnd()
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Large Image Loading</h1>
+        <img onload="loadend()" onloadstart="loadStart()" src="./big-img.png" />
+
+
+
+    </body>
+</html>
