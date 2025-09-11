@@ -1,19 +1,38 @@
-<html>
-    <head>
-        <title>Large Image Loading</title>
-        <script>
-            console.time()
+<!DOCTYPE html>
+<html lang="en">
 
-            function loadend(){
-                console.timeEnd()
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <div id="seadragon-viewer" style="width:800px; height:600px;"></div>
+    <script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+
+
+    <script>
+        const viewer = OpenSeadragon({
+            id: "seadragon-viewer",
+            prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+             showRotationControl: true,
+            showFlipControl: true,
+            tileSources: {
+                Image: {
+                    xmlns: "http://schemas.microsoft.com/deepzoom/2008",
+                    Url: "https://openseadragon.github.io/example-images/highsmith/highsmith_files/",
+                    Format: "jpg",
+                    Overlap: "2",
+                    TileSize: "256",
+                    Size: {
+                        Width: "7026",
+                        Height: "9221"
+                    }
+                }
             }
-        </script>
+        });
+    </script>
     </head>
-    <body>
-        <h1>Large Image Loading</h1>
-        <img onload="loadend()" onloadstart="loadStart()" src="./big-img.png" />
+</body>
 
-
-
-    </body>
 </html>
