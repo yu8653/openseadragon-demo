@@ -14,9 +14,10 @@
     <script>
         const viewer = OpenSeadragon({
             id: "seadragon-viewer",
-            prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
-             showRotationControl: true,
+            debugMode: true,
             showFlipControl: true,
+            showRotationControl: true,
+            prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
             tileSources: {
                 Image: {
                     xmlns: "http://schemas.microsoft.com/deepzoom/2008",
